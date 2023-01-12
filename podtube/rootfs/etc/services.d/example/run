@@ -7,13 +7,14 @@
 # Add your code here
 
 # Declare variables
-declare message
+declare google_api_key
 
-## Get the 'message' key from the user config options.
-message=$(bashio::config 'message')
+## Get the 'google_api_key' key from the user config options.
+google_api_key=$(bashio::config 'google_api_key')
 
-## Print the message the user supplied, defaults to "Hello World..."
-bashio::log.info "${message:="Hello World..."}"
+# Since pytube is a cat-and-mouse situation, upgrade on addon start.
+bashio::log.info "Checking pytube for new versions..."
+pip3 install --upgrade pytube
 
-## Run your program
-exec /usr/bin/my_program
+bashio::log.info "PodTube starting..."
+exec python3 /usr/bin/podtube.py $google_api_key 80
