@@ -1,4 +1,4 @@
-# Dave's Home Assistant add-on repository
+# Dave's Home Assistant add-ons
 
 A collection of Add-ons for home assistant
 
