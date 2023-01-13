@@ -1,9 +1,9 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Podtube
-version: "0.0.1"
+version: "0.0.2"
 slug: podtube
 description: >-
-  PodTube converts YouTube playlists and channels into podcass RSS feeds.
+  PodTube converts YouTube playlists and channels into podcast RSS feeds.
 url: "https://github.com/davet2001/home-assistant-addons/tree/main/podtube"
 arch:
   - armhf
