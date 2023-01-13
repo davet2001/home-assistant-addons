@@ -1,6 +1,4 @@
-# Home Assistant Add-on: Example add-on
-
-_Example add-on to use as a blueprint for new add-ons._
+# Home Assistant Add-on: PodTube
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
@@ -13,3 +11,9 @@ _Example add-on to use as a blueprint for new add-ons._
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
+
+Turn YouTube channels, playlists and videos into instant ad-free playable
+RSS feeds or video files.
+
+see
+https://github.com/aquacash5/PodTube
