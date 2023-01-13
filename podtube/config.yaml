@@ -11,10 +11,11 @@ arch:
   - aarch64
   - amd64
   - i386
-startup: application
 init: false
 ports:
   80/tcp: 9876
+ports_description:
+  80/tcp: "Main port where URL connections are served."
 options:
   google_api_key: null
 schema:
