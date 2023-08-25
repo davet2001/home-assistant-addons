@@ -16,7 +16,7 @@ google_api_key=$(bashio::config 'google_api_key')
 bashio::log.info "Checking pytube for new versions..."
 pip3 install --upgrade pytube
 
-bashio::log.info "PodTube starting..."
+bashio::log.info "PodTube starting...."
 touch /usr/bin/podtube.log
 tail -f /usr/bin/podtube.log &
 exec python3 /usr/bin/podtube.py $google_api_key 80
