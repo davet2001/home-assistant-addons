@@ -1,6 +1,7 @@
 #!/usr/bin/with-contenv bashio
 set -e
-CUSTOM_CA=$(bashio::config custom_ca)
+CUSTOM_CA=$(bashio::config 'custom_ca')
+bashio::log.info "Checking for custom ca certificate"
 
 if [ "$CUSTOM_CA" != 'null' ] && [ ! -z "$CUSTOM_CA" ]; then
 	bashio::log.info "Use custom ca certificate $CUSTOM_CA"

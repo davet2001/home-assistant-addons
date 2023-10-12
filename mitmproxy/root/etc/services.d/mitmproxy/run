@@ -1,17 +1,25 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/env bashio
 set -e
-OPTIONS=$(bashio::jq "${__BASHIO_ADDON_CONFIG}" '.options | map("\(.name)=\(.value|tostring)") | [.[] | "--set "  + .] |  join(" ")')
-HOST=$(bashio::host.hostname)
-
+CONFIG_PATH=/data/options.json
+bashio::log.info "Extracting options from ${CONFIG_PATH}..."
+OPTIONS=$(bashio::jq "${CONFIG_PATH}" 'with_entries(if .value == "" then empty else . end ) | to_entries[] | ["\(.key)=\(.value)" ] | [.[] | "--set "  + .] |  join(" ") ')
+bashio::log.info "Extraction complete."
 bashio::log.info "Start mitmproxy with options: $OPTIONS"
-bashio::log.info "For the onboarding page visit http://${HOST}:8082"
+#HOST=$(bashio::host.hostname)
+HOSTINFO=$(bashio::host)
+bashio::log.info "${HOSTINFO}"
+HOST="localhost"
+
+bashio::log.info "For the onboarding page, configure webclient to use proxy ${HOST}:8080, then visit http://mitm.it to get root certificate."
 # shellcheck disable=SC2086
 mitmweb $OPTIONS \
   --set 'web_host=0.0.0.0' \
   --set 'web_port=9090' \
   --set 'listen_port=8080' \
   --set 'confdir=/data/mitmproxy' \
-  --set 'onboarding_port=8082' \
-  --set "onboarding_host=$HOST" \
-  --set 'web_open_browser=false'
+  --set 'web_open_browser=false' \
   --no-web-open-browser
+Poe
+
+#  --set 'onboarding_port=8082' \
+#  --set "onboarding_host=$HOST" \
