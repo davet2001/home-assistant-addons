@@ -10,7 +10,7 @@ HOSTINFO=$(bashio::host)
 bashio::log.info "${HOSTINFO}"
 HOST="localhost"
 
-bashio::log.info "For the onboarding page, configure webclient to use proxy ${HOST}:8080, then visit http://mitm.it to get root certificate."
+bashio::log.info "For the onboarding page, configure web client to use proxy ${HOST}:8080, then visit the magic url http://mitm.it which mitmweb will intercept and give you a root certificate download page for your client."
 # shellcheck disable=SC2086
 mitmweb $OPTIONS \
   --set 'web_host=0.0.0.0' \
