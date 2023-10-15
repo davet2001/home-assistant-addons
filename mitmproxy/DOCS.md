@@ -1,8 +1,6 @@
 # Web UI
 
-To access the web ui of mitmproxy, visit `http://<host-ip>:8081` (or the port you configured).
-Currently there is no other method. Will change when [#3234](https://github.com/mitmproxy/mitmproxy/issues/3234) is fixed completly.
-
+To access the web ui of mitmproxy, click 'open web UI' from the addon info page.
 
 # Configuration
 
@@ -22,12 +20,10 @@ options:
 The list with all possible settings can be found [here](https://docs.mitmproxy.org/stable/concepts-options/#available-options).
 If you need to write into a file, the `/share` folder is mapped into the addon.
 
-
 ## Certificates
 
 To access also the certificates of Home Assistant the `/ssl` folder is mapped in read-only.
 Notice that mitmproxy requests the certificates as pem files.
-
 
 ### Own ca certificate
 
@@ -43,20 +39,21 @@ options:
 custom_ca: /ssl/ca-cert.pem
 ```
 
-
 ## Fixed Settings
 
 There are also a few settings which are fixed to their values. Those are:
 
-* `web_host`
-* `web_port`
-* `listen_port`
-* `confdir`
-* `onboarding_host`
-* `onboarding_port`
-
+- `web_host`
+- `web_port`
+- `listen_port`
+- `confdir`
+- `onboarding_host`
+- `onboarding_port`
 
 # Onboarding
 
-To install the mitmproxy ca as an trusted certificate authority the onboarding page can be accessed on `http://<host>:8082`.
+To install the mitmproxy ca as an trusted certificate authority, the onboarding page can be accessed via `http://mitm.it`. This is a magic URL - when working correctly mitmproxy will intercept this and show you a page to download the root certificates for https monitoring.
+
+Follow the instructions on the page to install these to your device.
+
 Notice that your trafic must be routed over mitmproxy to access the page.
