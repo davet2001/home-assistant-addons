@@ -66,10 +66,6 @@
         "reevaluateOnRerun": false
       }
     }
-
-
-
-    docker exec -it addon_local_mitmproxy sh -c bash
   ],
   "inputs": [
     {
