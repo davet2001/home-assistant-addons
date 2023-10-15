@@ -18,10 +18,8 @@ ingress: true
 ingress_port: 8081
 #webui: http://[HOST]:[PORT:8081]
 ports:
-  8081/tcp: 8081
   8080/tcp: 8080
 ports_description:
-  8081/tcp: "Web Frontend."
   8080/tcp: "Proxy listening port"
 options:
   anticache: true
