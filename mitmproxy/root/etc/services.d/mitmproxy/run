@@ -1,4 +1,4 @@
-#!/usr/bin/env bashio
+#!/usr/bin/with-contenv bashio
 set -e
 CONFIG_PATH=/data/options.json
 bashio::log.info "Extracting options from ${CONFIG_PATH}..."
