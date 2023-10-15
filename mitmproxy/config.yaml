@@ -26,4 +26,4 @@ options:
 schema:
   anticache: bool
   custom_ca: "match(^/ssl/.+$)" #'"match(^/ssl/.+|^$)"
-image: "ghcr.io/davet2001/{arch}-addon-mitmproxy"
+#image: "ghcr.io/davet2001/{arch}-addon-mitmproxy"
