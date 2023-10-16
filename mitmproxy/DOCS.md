@@ -1,6 +1,7 @@
 # Web UI
 
-To access the web ui of mitmproxy, click 'open web UI' from the addon info page.
+To access the user interface of mitmproxy, click 'open web UI' from the addon info page.  
+This connects to the 'mitmweb' service running within the addon.
 
 # Configuration
 
@@ -18,6 +19,10 @@ options:
 ```
 
 The list with all possible settings can be found [here](https://docs.mitmproxy.org/stable/concepts-options/#available-options).
+
+It is possible to modify settings via the user interface, but these are not 
+currently saved between restarts of the mitmproxy addon.
+
 If you need to write into a file, the `/share` folder is mapped into the addon.
 
 ## Certificates
@@ -47,13 +52,11 @@ There are also a few settings which are fixed to their values. Those are:
 - `web_port`
 - `listen_port`
 - `confdir`
-- `onboarding_host`
-- `onboarding_port`
 
 # Onboarding
 
-To install the mitmproxy ca as an trusted certificate authority, the onboarding page can be accessed via `http://mitm.it`. This is a magic URL - when working correctly mitmproxy will intercept this and show you a page to download the root certificates for https monitoring.
+To install the mitmproxy certificate authority as a trusted CA, the onboarding page can be accessed via `http://mitm.it`. This is a magic URL - when your proxy settings are configured correctly and mitmproxy is running, mitmproxy will intercept this and show you a page to download the root certificates for https monitoring.
 
 Follow the instructions on the page to install these to your device.
 
-Notice that your trafic must be routed over mitmproxy to access the page.
+Notice that your traffic must be routed over mitmproxy to access the page.
