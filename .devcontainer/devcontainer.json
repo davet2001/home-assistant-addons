@@ -3,7 +3,9 @@
   "image": "ghcr.io/home-assistant/devcontainer:addons",
   "appPort": [
     "7123:8123",
-    "7357:4357"
+    "7357:4357",
+    "8080:8080",
+    "8081:8081"
   ],
   "postStartCommand": "bash devcontainer_bootstrap",
   "runArgs": [
