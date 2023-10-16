@@ -21,6 +21,16 @@ This repository contains the following add-ons
 _Turn YouTube channels, playlists and videos into instant ad-free playable
 RSS feeds or video files._
 
+### [mitmproxy](./mitmproxy)
+
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
+_Run a TLS capable man-in-the-middle (MITM) proxy server for analysing and
+modifying internet traffic to & from your devices._
 <!--
 
 Notes to developers after forking or using the github template feature:
