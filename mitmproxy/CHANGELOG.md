@@ -1,12 +1,13 @@
 ## 1.3.0 - 2023-10-15
 
+- 📝 Reinstated mitmproxy following deprecation by Poeschl
 - 🔼 Updated container base images to `3.18`
 - 🔼 Updated haproxy to `2.7.6.r10`
-- 🔼 Updated mitmproxy to `10.1.1-r0` and install via apk
-- 🔼 Many other dependencies updated to now tie to mitmproxy apk
+- 🔼 Updated mitmproxy to `10.1.1-r0` 
 - 📝 Added patching of mitmweb to allow ingress
 - 📝 Port 8081 is no longer exposed for UI access - removed from config UI
 - 📝 Updated readme, documentation etc to reflect new/old maintainers.
+
 
 ## 1.2.0 - 2022-04-05
 
