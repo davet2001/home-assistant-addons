@@ -34,7 +34,6 @@ RUN \
     py3-hyperframe=6.0.1-r2 \
     py3-kaitaistruct=0.10-r3 \
     py3-ldap3=2.9.1-r2 \
-    py3-zstandard=0.21.0-r2 \
     rust=1.71.1-r0 \
     cargo=1.71.1-r0 \
     bsd-compat-headers=0.7.2-r5 \
