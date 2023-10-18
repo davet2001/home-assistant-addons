@@ -53,6 +53,8 @@ There are also a few settings which are fixed to their values. Those are:
 - `listen_port`
 - `confdir`
 
+*Note that the listen port is configured as `8080` by default, this is the proxy server where the clients make their connection.  Changing the setting in the addon config re-maps the internal port 8080 to the external port specified.  mitmweb is unaware that this remapping is taking place, so it still displays `HTTP(S) proxy listening at *:8080`, regardless of what the external port setting is.  Please ignore the '8080' shown on the mitmweb in this case.*
+
 # Onboarding
 
 To install the mitmproxy certificate authority as a trusted CA, the onboarding page can be accessed via `http://mitm.it`. This is a magic URL - when your proxy settings are configured correctly and mitmproxy is running, mitmproxy will intercept this and show you a page to download the root certificates for https monitoring.
