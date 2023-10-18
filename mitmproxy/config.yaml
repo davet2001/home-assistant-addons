@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: mitmproxy
-version: "1.3.1beta"
+version: "1.3.0"
 slug: mitmproxy
 description: >-
   A free and open source interactive HTTPS proxy for intercepting and inspecting network traffic.
@@ -26,4 +26,4 @@ options:
 schema:
   anticache: bool
   custom_ca: "match(^/ssl/.+|^$)"
-#image: "ghcr.io/davet2001/{arch}-addon-mitmproxy"
+image: "ghcr.io/davet2001/{arch}-addon-mitmproxy"
