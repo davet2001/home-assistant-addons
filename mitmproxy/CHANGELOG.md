@@ -1,3 +1,7 @@
+## 1.3.1 - 2023-10-18
+
+- 📝 Fixed issue #29 where mitmproxy would display 403 error about DNS Rebinding
+
 ## 1.3.0 - 2023-10-15
 
 - 📝 Reinstated mitmproxy following deprecation by Poeschl
