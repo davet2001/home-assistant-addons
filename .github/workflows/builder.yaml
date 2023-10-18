@@ -10,7 +10,7 @@ on:
       - build
   pull_request:
     branches:
-      - build
+      - main
 
 jobs:
   init:
