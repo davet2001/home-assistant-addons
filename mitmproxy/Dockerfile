@@ -50,6 +50,8 @@ RUN \
 RUN pip3 install --no-cache-dir --user --upgrade mitmproxy==10.1.1
 
 # patch mitmproxy to allow running with relative paths not in the server root
+# Now that https://github.com/mitmproxy/mitmproxy/pull/6411 is merged,
+# mitmproxy >10.1.1 should not need the patch lines below.
 COPY mitmweb_relpath.patch /mitmweb_relpath.patch
 RUN patch -u /root/.local/lib/python3.11/site-packages/mitmproxy/tools/web/templates/index.html -i /mitmweb_relpath.patch
 RUN sed -i 's/"\/updates\"/location\.pathname\+"updates"/' /root/.local/lib/python3.11/site-packages/mitmproxy/tools/web/static/app.js
