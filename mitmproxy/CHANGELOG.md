@@ -1,3 +1,8 @@
+## 1.3.2 - 2023-10-19
+
+- 📝 Attempt to fix 'manifest unknown' problem with build.
+- 📝 Fix some github build warnings
+
 ## 1.3.1 - 2023-10-18
 
 - 📝 Fixed issue #29 where mitmproxy would display 403 error about DNS Rebinding
@@ -7,11 +12,10 @@
 - 📝 Reinstated mitmproxy following deprecation by Poeschl
 - 🔼 Updated container base images to `3.18`
 - 🔼 Updated haproxy to `2.7.6.r10`
-- 🔼 Updated mitmproxy to `10.1.1-r0` 
+- 🔼 Updated mitmproxy to `10.1.1-r0`
 - 📝 Added patching of mitmweb to allow ingress
 - 📝 Port 8081 is no longer exposed for UI access - removed from config UI
 - 📝 Updated readme, documentation etc to reflect new/old maintainers.
-
 
 ## 1.2.0 - 2022-04-05
 
