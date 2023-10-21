@@ -55,7 +55,7 @@ RUN pip3 install --no-cache-dir --user --upgrade mitmproxy==10.1.1
 COPY mitmweb_relpath.patch /mitmweb_relpath.patch
 RUN patch -u /root/.local/lib/python3.11/site-packages/mitmproxy/tools/web/templates/index.html -i /mitmweb_relpath.patch
 RUN sed -i 's/"\/updates\"/location\.pathname\+"updates"/' /root/.local/lib/python3.11/site-packages/mitmproxy/tools/web/static/app.js
-
+RUN sed -i 's/"\/options/"options/' /root/.local/lib/python3.11/site-packages/mitmproxy/tools/web/static/app.js
 FROM $BUILD_FROM AS RUNNING
 
 RUN apk add --no-cache \
