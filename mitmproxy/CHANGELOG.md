@@ -1,3 +1,9 @@
+## 1.3.3 - 2023-10-21
+
+- 📝 Fix websocket problem where options would disappear as soon as you typed them in the web UI
+- 📝 Tidy up some log output
+- 📝 Update developer docs
+
 ## 1.3.2 - 2023-10-19
 
 - 📝 Attempt to fix 'manifest unknown' problem with build.
