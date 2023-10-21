@@ -3,7 +3,7 @@ name: mitmproxy
 version: "1.3.3"
 slug: mitmproxy
 description: >-
-  A free and open source interactive HTTPS proxy for intercepting and inspecting network traffic.
+  A free and open source interactive HTTPS proxy for intercepting and inspecting network traffic
 url: "https://github.com/davet2001/home-assistant-addons/tree/main/mitmproxy"
 arch:
   - armhf
