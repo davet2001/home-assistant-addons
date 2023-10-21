@@ -6,8 +6,7 @@ OPTIONS=$(bashio::jq "${CONFIG_PATH}" 'with_entries(if .value == "" then empty e
 bashio::log.info "Extraction complete."
 bashio::log.info "Start mitmproxy with options: $OPTIONS"
 HOST=$(bashio::host.hostname)
-HOSTINFO=$(bashio::host)
-bashio::log.info "${HOSTINFO}"
+bashio::log.info "Hostname is ${HOST}"
 
 bashio::log.info "For the onboarding page, configure web client to use proxy ${HOST}:8080, then visit the magic url http://mitm.it which mitmweb will intercept and give you a root certificate download page for your client."
 # shellcheck disable=SC2086
@@ -18,6 +17,3 @@ mitmweb $OPTIONS \
   --set 'confdir=/data/mitmproxy' \
   --set 'web_open_browser=false' \
   --no-web-open-browser
-
-#  --set 'onboarding_port=8082' \
-#  --set "onboarding_host=$HOST" \
